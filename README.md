@@ -2,36 +2,36 @@
 
 ## Introduction
 
-📊 This project started as SQL practice and turned into something I actually wanted to see through. I built a three-table database modelled on Arla Foods' brand portfolio in Nigeria — DANO, Arla, Lurpak, Castello, and Puck. I then wrote queries to answer the type of questions a commercial or trade marketing analyst at a dairy company would actually ask: which brand is carrying the quarter, which products tops the revenue and which states are topping the charts in numbers.
+📊 This project started as SQL practice and turned into something I actually wanted to see through. I built a three-table database modelled on Arla Foods' brand portfolio in Nigeria (DANO, Arla, Lurpak, Castello, and Puck). I then wrote queries to answer the questions a commercial or trade marketing analyst at a dairy company would ask: which brand is carrying the quarter, which products tops the revenue and the customers that are topping the charts in numbers.
 
 🔍Curious about the SQL behind this? Check the queries here: [`sql_analysis`](/sql_analysis/)
 
 ## Background
 
->⚠️ **NOTE:** This is a synthetic practice dataset. The brand portfolio — DANO, Arla, Lurpak, Castello, Puck reflects Arla's real lineup in Nigeria. But every customer record and every sales transaction in this database was generated for practice purposes. None of the figures below describe Arla's real business data.
+>⚠️ **NOTE:** This is a synthetic practice dataset. The brand portfolio—DANO, Arla, Lurpak, Castello, Puck are Arla's real lineup in Nigeria. However, every customer record and every sales transaction in this database was generated for practice purposes. None of the figures below describe Arla's real business data.
 
-I built it this way on purpose. I wanted a dataset that felt close enough to a real FMCG dairy business that the SQL questions would feel like real business questions.
+WHY? I wanted a dataset that felt close enough to a real FMCG dairy business. Just like an actual business questions.
 
 ## 🤔The Questions I Set Out to Answer
 
-The full practice set has 10 questions. These covers joins, aggregation, anti-joins, and date-based grouping. Here are some few results:
+The full practice set has 10 questions. These covers joins, aggregation, anti-joins, and date-based grouping. For the analysis, I settled for three business questions:
 
 1. For each quarter of 2025, what is total revenue by brand?
 2. Which 5 products generated the most revenue overall?
-3. Which individual supermarket customers spent the most on Arla Foods products?
+3. Which supermarket customers by State spent the most on Arla Foods products?
 
 ## ⚙️Tools I Used
 
 For this project, I worked with:
 
-- **SQL** — the backbone of the analysis, for querying the database and pulling out the numbers that mattered.
-- **PostgreSQL** — the database engine behind the whole project.
-- **Visual Studio Code** — where I wrote and ran every query.
-- **Git & GitHub** — for version control and to share the project here.
+- **SQL:** The backbone of the analysis, for querying the database and pulling out the numbers that mattered.
+- **PostgreSQL:** The database engine behind the whole project.
+- **Visual Studio Code:** Where I wrote and ran every query.
+- **Git & GitHub:** For version control and to share the project here.
 
 ## 📊 The Analysis
 
-Each query below was aimed at answering one specific business question. Here's how I approached each one, and what came out of it.
+Each query below was aimed at answering a business question. Here's how I approached each one, and their results.
 
 ### 1️⃣ Top Performing Arla Brands (Quarterly)
 
@@ -62,7 +62,7 @@ ORDER BY
 | Q3 | Lurpak | ₦33.01M |
 | Q4 | Lurpak | ₦28.97M |
 
-Across the full year, brand totals came out like this:
+In a full year, brand totals came out like this:
 
 | Brand | Total 2025 revenue | Share of total |
 |---|---:|---:|
@@ -72,7 +72,9 @@ Across the full year, brand totals came out like this:
 | Puck | ₦53.46M | 14.2% |
 | Arla | ₦31.00M | 8.2% |
 
-**What stood out to me:** Lurpak wasn't just the top brand — it won 3 of the 4 quarters outright, and Q2 was the one quarter it slipped, with DANO overtaking it by a narrow margin (₦23.29M vs ₦21.92M). Arla, meanwhile, sat consistently at the bottom every single quarter, and its Q3 number (₦5.18M) was its weakest point in the year — worth a second look at whether that's a pricing issue, a distribution gap, or just a smaller product range.
+**What stood out for me:** Lurpak wasn't just the top brand. It won 3 of the 4 quarters outright, and Q2 was the one quarter it slipped, with DANO overtaking it by a narrow margin (₦23.29M vs ₦21.92M). Arla, meanwhile, sat consistently at the bottom every single quarter, and its Q3 number (₦5.18M) was its weakest point in the year. 
+
+PS: Worth a second look at whether that's a pricing issue, a distribution gap, or just a smaller product range.
 
 ### 2️⃣ Top 5 Products in Revenue?
 
@@ -110,7 +112,7 @@ _Bar graph visualizing the top 5 products in revenue for Arla Foods Ng; Claude A
 | 4 | Castello Parmesan 500g | Castello | Cheese | ₦6.69M |
 | 5 | Lurpak Spreadable Butter 400g | Lurpak | Butter | ₦6.48M |
 
-**What stood out to me:** Lurpak takes 3 of the top 5 spots, which lines up with it being the year's overall revenue brand. Plus, every single product in this top 5 is either Butter or Cheese. That's a strong signal that in this dataset, the premium, higher-margin categories are where the real revenue concentration sits — worth testing against unit_cost_ngn in a follow-up query on margin.
+**What stood out for me:** Again, Lurpak takes 3 of the top 5 spots, which lines up with it being the year's overall revenue brand. Plus, every single product in this top 5 is either Butter or Cheese. That's a strong signal that in this dataset, the premium, higher-margin categories are where the actual revenue concentration sits. Worth testing against unit_cost_ngn in a follow-up query on margin.
 
 ### 3️⃣ Highest Spending Supermarkets
 
@@ -149,25 +151,25 @@ _Bar chart showing the highest spending states among supermarket customers; Clau
 | 9 | Marina Supermarket | Kano | ₦2.44M |
 | 10 | Green Superstore | Cross River | ₦2.06M |
 
-**What stood out to me:** Palm Superstore in Katsina came out on top with ₦4.39M. **(I guess it should have been a Supermarket in Lagos, you know :-). However, I'm not surprised because the dataset wasn't a real business data but a random generated data for educational purpose, so in a real market scenario that assumption can't hold...**
+**What stood out for me:** Palm Superstore in Katsina came out on top with ₦4.39M. **(I guess it should have been a Supermarket in Lagos, you know :-). However, I'm not surprised because the dataset wasn't a real business data but a generated data for educational purpose, so in an actual market scenario that assumption can't hold...**
 
 ## 📚 What I Learned
 
 Working through this project pushed my SQL further than the basic `SELECT/WHERE` level:
 
-- 🧩 **Joining across a real schema** — building queries that walk from a fact table (`sales_arla`) out to two dimension tables (`products_arla`, `customers_arla`), and getting comfortable with which table to anchor the `FROM` on.
-- 🧮 **Computed expressions inside aggregates** — writing `SUM(quantity * unit_price_ngn * (1 - discount_pct/100))` instead of assuming a revenue column already exists, and catching the difference between list price and what a customer actually paid.
-- 🗓️ **Date-based grouping** — using `EXTRACT(QUARTER FROM sale_date)` to roll transactions up into business periods instead of just raw dates.
-- 🎯 **Filtering before grouping vs. after** — the difference between a `WHERE` clause (filters rows before aggregation, like restricting to Supermarket customers) and a `HAVING` clause (filters after aggregation, like keeping only products above a revenue threshold).
-- 🚫 **Anti-join logic** — writing queries for "customers who have never bought X," which needed a different mental model than a standard JOIN.
+- 🧩 **Joining across a real schema:** Building queries that walk from a fact table (`sales_arla`) out to two dimension tables (`products_arla`, `customers_arla`), and getting comfortable with which table to anchor the `FROM` on.
+- 🧮 **Computed expressions inside aggregates:** Writing `SUM(quantity * unit_price_ngn * (1 - discount_pct/100))` instead of assuming a revenue column already exists, and catching the difference between list price and what a customer actually paid.
+- 🗓️ **Date-based grouping:** Using `EXTRACT(QUARTER FROM sale_date)` to roll transactions up into business periods instead of just raw dates.
+- 🎯 **Filtering before grouping vs. after:** The difference between a `WHERE` clause (filters rows before aggregation, like restricting to Supermarket customers) and a `HAVING` clause (filters after aggregation, like keeping only products above a revenue threshold).
+- 🚫 **Anti-join logic:** Writing queries for "customers who have never bought X," which needed a different mental model than a standard JOIN.
 
 ## ⬇️Conclusions
 
 A few things came out of this analysis worth sitting with:
 
-- **Lurpak is toptier** — leading 3 of 4 quarters and taking 3 of the top 5 product slots. If this were a real business, that's a brand you'd want to understand deeply: what's driving it, and whether it's replicable elsewhere in the portfolio.
-- **Butter and Cheese outperform Milk Powder, UHT, and Yoghurt at the top end** — none of the latter categories cracked the top 5 products, despite having more SKUs in the catalogue overall.
+- **Lurpak is toptier:** Leading 3 of 4 quarters and taking 3 of the top 5 product slots. If this were a real business data, that's a brand you'd want to understand deeply: what's driving it, and whether it's replicable elsewhere in the portfolio.
+- **Butter and Cheese outperform Milk Powder, UHT, and Yoghurt at the top end:** None of the latter categories cracked the top 5 products, despite having more SKUs in the catalogue overall.
 
 ## Closing Thoughts
 
-This project sharpened two things for me at once: my SQL, and my instinct for asking business-shaped questions of a dataset rather than just technically correct ones. Every query here started from something I'd genuinely want to know if I were sitting inside a dairy company's commercial team, and not just "can I write this JOIN," but "what would this number actually tell someone making a decision." That's the habit I wanted to build!
+This project sharpened two things for me at once: my SQL, and my instinct for asking business-shaped questions of a dataset. Every query here is a similitude of something I'd want to know if I were sitting inside a dairy company's commercial team, and "what would this number would tell someone making a decision." That's the habit I wanted to build!
