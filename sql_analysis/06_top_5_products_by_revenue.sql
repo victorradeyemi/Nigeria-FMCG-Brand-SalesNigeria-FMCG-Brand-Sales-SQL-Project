@@ -26,3 +26,15 @@ ORDER BY
     total_revenue DESC
 LIMIT 5;    
 
+
+/* RESULT: 
+Lurpak Unsalted Butter 400g was the highest revenue generating product (₦12.12M), with Lurpak occupying the top two positions in the ranking.
+[
+  {
+    "product_id": 108,
+    "product_name": "Lurpak Unsalted Butter 400g",
+    "total_revenue": "12123108",
+    "brand": "Lurpak",
+    "category": "Butter"
+  }
+*/

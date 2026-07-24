@@ -18,7 +18,7 @@ The full practice set has 10 questions. These covers joins, aggregation, anti-jo
 
 1. For each quarter of 2025, what is total revenue by brand?
 2. Which 5 products generated the most revenue overall?
-3. Among supermarket customers only, which state spent the most?
+3. Which supermarket customers spent the most?
 
 ## ⚙️Tools I Used
 
@@ -33,7 +33,7 @@ For this project, I worked with:
 
 Each query below was aimed at answering one specific business question. Here's how I approached each one, and what came out of it.
 
-### 1️⃣ Quarterly brand revenue — the top performing in a year
+### 1️⃣ Top Performing Arla Brands (Quarterly)
 
 ```sql
 SELECT
@@ -74,7 +74,7 @@ Across the full year, brand totals came out like this:
 
 **What stood out to me:** Lurpak wasn't just the top brand — it won 3 of the 4 quarters outright, and Q2 was the one quarter it slipped, with DANO overtaking it by a narrow margin (₦23.29M vs ₦21.92M). Arla, meanwhile, sat consistently at the bottom every single quarter, and its Q3 number (₦5.18M) was its weakest point in the year — worth a second look at whether that's a pricing issue, a distribution gap, or just a smaller product range.
 
-### 2️⃣ Top 5 products — where is the revenue actually concentrated?
+### 2️⃣ Top 5 Products in Revenue?
 
 ```sql
 SELECT
@@ -112,10 +112,11 @@ _Bar graph visualizing the top 5 products in revenue for Arla Foods Ng; Claude A
 
 **What stood out to me:** Lurpak takes 3 of the top 5 spots, which lines up with it being the year's overall revenue brand. Plus, every single product in this top 5 is either Butter or Cheese. That's a strong signal that in this dataset, the premium, higher-margin categories are where the real revenue concentration sits — worth testing against unit_cost_ngn in a follow-up query on margin.
 
-### 3️⃣ Top states by supermarket spend
+### 3️⃣ Highest Spending Supermarkets
 
 ```sql
 SELECT
+    c.customer_name,
     c.state,
     ROUND(
     SUM(s.unit_price_ngn * s.quantity),
@@ -126,11 +127,13 @@ FROM
 JOIN  sales_arla s           
     ON c.customer_id = s.customer_id
 WHERE customer_type = 'Supermarket'
-GROUP BY c.state
-ORDER BY total_spend DESC;
+GROUP BY c.state,
+         c.customer_name
+ORDER BY total_spend DESC
+LIMIT 10;
 ```
 
-![Top 10 states by supermarket spend](./assets/state_supermarket_spend.png)
+![Highest Spending Supermarkets](./assets/state_supermarket_spend.png)
 _Bar chart showing the highest spending states among supermarket customers; Claude AI generated this graph from my SQL query results_
 
 | Rank | State | Spend |

@@ -23,3 +23,8 @@ HAVING
     SUM(s.quantity * s.unit_price_ngn) > 2000000
 ORDER BY
     total_revenue DESC;       
+
+--
+/* RESULT: 
+Lurpak Unsalted Butter 400g generated the highest revenue (₦12.12M) among products launched since 2023, with Lurpak accounting for three of the top seven products.
+*/

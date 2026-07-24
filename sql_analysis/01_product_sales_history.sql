@@ -16,4 +16,7 @@ INNER JOIN customers_arla c
 WHERE
     p.product_name = 'DANO Full Cream Milk Powder 400g';      
 
-    
+--
+/* RESULT: 
+The results indicate that purchases of DANO Full Cream Milk Powder 400g occurred throughout the year and were made by customers from different business categories.
+*/

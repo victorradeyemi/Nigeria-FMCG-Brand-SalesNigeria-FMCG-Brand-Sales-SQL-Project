@@ -15,3 +15,6 @@ JOIN products_arla p
 GROUP BY customer_type;
 
 --
+/* RESULT: 
+Convenience Stores purchased the highest quantity (20,464 units) and the widest product range (105 products), while Pharmacies recorded the lowest (5,502 units, 27 products).
+*/

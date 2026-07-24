@@ -23,6 +23,7 @@ ORDER BY
     quarter,
     total_revenue DESC;
 
-
-
 --
+/* RESULT: 
+Lurpak led revenue in Q1 with ₦29.05M, while DANO topped Q2 with ₦23.29M
+*/

@@ -18,3 +18,6 @@ WHERE
     p.brand <> 'Lurpak';
 
 --
+/* RESULT: 
+Dairy Dessert, Butter, Cooking Cream, Whipping Cream, Flavoured Milk, UHT Milk, and Cheese recorded the highest average discount of 4%, while Milk Powder and Yoghurt averaged slightly lower discounts at 3%.
+*/

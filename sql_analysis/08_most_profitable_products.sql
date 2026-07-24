@@ -15,4 +15,6 @@ Calculate profit margin (unit_price_ngn − unit_cost_ngn) for each product, and
  LIMIT 10;
 
 --
- 
+ /* RESULT: 
+Lurpak Lighter Salted Butter 500g recorded the highest profit margin (₦3,140), with Lurpak occupying five of the top seven most profitable products.
+*/

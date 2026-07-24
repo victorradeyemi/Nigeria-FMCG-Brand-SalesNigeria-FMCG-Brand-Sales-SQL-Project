@@ -15,3 +15,7 @@ INNER JOIN sales_arla s
 GROUP BY brand
 ORDER BY brand_reveneue DESC;
 
+--
+/* RESULT: 
+Lurpak generated the highest net revenue, followed by Castello and DANO.
+*/
