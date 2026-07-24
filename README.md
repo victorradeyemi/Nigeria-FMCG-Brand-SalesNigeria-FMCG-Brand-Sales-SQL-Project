@@ -2,7 +2,9 @@
 
 ## Introduction
 
-📊 This project started as SQL practice and turned into something I actually wanted to see through. I built a three-table database modelled on Arla Foods' brand portfolio in Nigeria (DANO, Arla, Lurpak, Castello, and Puck). I then wrote queries to answer the questions a commercial or trade marketing analyst at a dairy company would ask: which brand is carrying the quarter, which products tops the revenue and the customers that are topping the charts in numbers.
+📊 This project started as SQL practice and turned into something I actually wanted to see through. I built a three-table database modelled on Arla Foods' brand portfolio in Nigeria (DANO, Arla, Lurpak, Castello, and Puck). 
+
+I then wrote queries to answer the questions a commercial or trade marketing analyst at a dairy company would ask: which brand is carrying the quarter, which products tops the revenue and the customers that are topping the charts in numbers.
 
 🔍Curious about the SQL behind this? Check the queries here: [`sql_analysis`](/sql_analysis/)
 
