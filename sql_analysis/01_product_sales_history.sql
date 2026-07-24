@@ -18,5 +18,5 @@ WHERE
 
 --
 /* RESULT: 
-The results indicate that purchases of DANO Full Cream Milk Powder 400g occurred throughout the year and were made by customers from different business categories.
+The purchases of DANO Full Cream Milk Powder 400g occurred throughout the year and were made by customers from different business categories.
 */
