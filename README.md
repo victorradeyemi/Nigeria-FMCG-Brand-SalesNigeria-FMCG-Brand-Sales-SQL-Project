@@ -18,7 +18,7 @@ The full practice set has 10 questions. These covers joins, aggregation, anti-jo
 
 1. For each quarter of 2025, what is total revenue by brand?
 2. Which 5 products generated the most revenue overall?
-3. Which supermarket customers spent the most?
+3. Which individual supermarket customers spent the most on Arla Foods products?
 
 ## ⚙️Tools I Used
 
@@ -133,23 +133,23 @@ ORDER BY total_spend DESC
 LIMIT 10;
 ```
 
-![Highest Spending Supermarkets](./assets/state_supermarket_spend.png)
+![Highest Spending Supermarkets](./assets/highest_spending_supermarkets.png)
 _Bar chart showing the highest spending states among supermarket customers; Claude AI generated this graph from my SQL query results_
 
-| Rank | State | Spend |
-|---|---|---:|
-| 1 | Katsina | ₦7.92M |
-| 2 | Benue | ₦6.75M |
-| 3 | Kano | ₦5.31M |
-| 4 | Ondo | ₦5.24M |
-| 5 | Imo | ₦4.99M |
-| 6 | Osun | ₦4.73M |
-| 7 | Edo | ₦4.31M |
-| 8 | Oyo | ₦4.02M |
-| 9 | Anambra | ₦3.92M |
-| 10 | Cross River | ₦2.72M |
+| Rank | Supermarket | State | Spend |
+|---|---|---|---:|
+| 1 | Palm Superstore | Katsina | ₦4.39M |
+| 2 | Royal Mart | Osun | ₦4.04M |
+| 3 | Heritage Mart | Imo | ₦3.94M |
+| 4 | Crown Supermarket | Benue | ₦3.12M |
+| 5 | Green Mart | Ondo | ₦2.83M |
+| 6 | Crown Supermarket | Edo | ₦2.70M |
+| 7 | Fresh Mart | Anambra | ₦2.61M |
+| 8 | Prince Ebeano Supermarket | Delta | ₦2.60M |
+| 9 | Marina Supermarket | Kano | ₦2.44M |
+| 10 | Green Superstore | Cross River | ₦2.06M |
 
-**What stood out to me:** Katsina came out on top with ₦7.92M, just under 13% of all supermarket spend across the 17 states that showed up in the results. **(I guess it should have been Lagos you know :-) not too surprised because the dataset wasn't a real business data but a random generated data for educational purpose, so in a real-world market intuition that assumption can't hold...**
+**What stood out to me:** Palm Superstore in Katsina came out on top with ₦4.39M. **(I guess it should have been a Supermarket in Lagos, you know :-). However, I'm not surprised because the dataset wasn't a real business data but a random generated data for educational purpose, so in a real market scenario that assumption can't hold...**
 
 ## 📚 What I Learned
 
