@@ -138,7 +138,7 @@ LIMIT 10;
 ```
 
 ![Highest Spending Supermarkets](./assets/highest_spending_supermarkets.png)
-_Bar chart showing the highest spending states among supermarket customers; Claude AI generated this graph from my SQL query results_
+_Bar chart showing the highest supermarket customers; Claude AI generated this graph from my SQL query results_
 
 | Rank | Supermarket | State | Spend |
 |---|---|---|---:|
