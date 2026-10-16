@@ -1,4 +1,4 @@
-# 🥛Arla Foods Nigeria Sales Analysis — A SQL Insight
+# 🥛Nigeria FMCG Brand Sales -- A SQL Insight
 
 ## Introduction
 
